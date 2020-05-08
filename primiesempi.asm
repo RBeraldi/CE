@@ -43,6 +43,6 @@ sw $t0 0x1064
 #Memorizzare in $t1 il secondo byte contenuto in $t0
 
  li $t3 0xFF00
- and $t0 $t0 $t1
+ and $t1 $t0 $t3
  li $t3 8
- div $t0 $t0 $t3
+ div $t1 $t1 $t3
