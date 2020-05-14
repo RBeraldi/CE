@@ -1,4 +1,3 @@
-#
 #while (x<=y) {
 # z = z+10
 # x = x +1
@@ -11,12 +10,9 @@
 	z: .word 0 #z=0
 .text
 main:
-	la $t0 x
-	lw $t1 0($t0) #%t1 = x
-	la $t2 y
-	lw $t3 0($t2) #%t3 = y
-	la $t4 z
-	lw $t5 0($t4) #%t4 = z
+	lw $t1 x #%t1 = x
+	lw $t3 y #%t3 = y
+	lw $t5 z #%t4 = z
 	li $t6 10
 	li $t7 1
 
