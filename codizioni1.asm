@@ -1,28 +1,25 @@
 .text
 
 main:
-    li $t1 10 #a
-    li $t2 20 #b
-    li $t3 30 #c
+#if (a<b) && (c==0)) d = 1   
 
-#if (a<b) && (c==0)) d = 1
+    li $s1 10 #a
+    li $s2 20 #b
+    li $s3 30 #c
 
-		bge $t1 $t2 exit #if (a >=b)
-    bne $t3 $0 exit  #if (a!=0)
-    j skip
-
-exit:
-		li $v0 1 #d
+    bge $s1 $s2 skip #if (a >=b) goto skip
+    bne $s3 $0 skip  #if (a!=0)
+    li $v0 1 #assumo d in $v0
 skip:
 
 #if (a>0) 
 #	b=b+10 
 #else
 # b = a-10
-		ble $t1 $0 else# if (a<=0) goto else
+    ble $s1 $0 else# if (a<=0) goto else
     li $t0 10
-    add $t2 $t2 $t0 #b=b+10
+    add $s2 $s2 $t0 #b=b+10
     j end
 else:
-    sub $t2 $1 $t1
+    sub $s2 $s1 $t0
 end:
