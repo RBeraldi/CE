@@ -23,10 +23,9 @@ main:
    j exitall 
 #######FUNZIONE ABS######  
 abs:
-	bge $a0 $0 else #(if a>=0)
-  sub $v0 $zero $a0 #a0=0-a0
-  jr $ra
- else: 
+  bge $a0 $0 else #(if a>=0)
+  sub $a0 $zero $a0 #a0=0-a0
+else: 
   move $v0 $a0
   jr $ra
  #####FINE FUNZIONE ABS
