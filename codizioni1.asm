@@ -16,8 +16,8 @@ skip:
 #	b=b+10 
 #else
 # b = a-10
-    ble $s1 $0 else# if (a<=0) goto else
     li $t0 10
+    ble $s1 $0 else# if (a<=0) goto else
     add $s2 $s2 $t0 #b=b+10
     j end
 else:
