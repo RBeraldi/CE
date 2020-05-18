@@ -22,7 +22,7 @@ main:
   sw $s0 8($sp)
   
   add $t0 $a0 $a1 #g+h
-  add $t1 $a2 $s3 #i+j
+  add $t1 $a2 $a3 #i+j
   sub $s0 $t0 $t1 #f = ...
   
   add $v0 $s0 $zero #valore di ritorno..
